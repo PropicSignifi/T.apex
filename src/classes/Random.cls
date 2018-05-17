@@ -443,14 +443,14 @@ public class Random {
     private static final String CHARS_VOWELS = 'aeiou';
     private static final String REGEX_PUNCTUATIONS = '^[\\.\\?;!:]$';
 
-    private static final Integer MIN_INTEGER = -2147483647;
-    private static final Integer MAX_INTEGER = 2147483647;
-    private static final Long MIN_LONG = -9223372036854775807L;
-    private static final Long MAX_LONG = 9223372036854775807L;
-    private static final Double MIN_DOUBLE = MIN_LONG;
-    private static final Double MAX_DOUBLE = MAX_LONG;
-    private static final Decimal MIN_DECIMAL = MIN_LONG;
-    private static final Decimal MAX_DECIMAL = MAX_LONG;
+    public static final Integer MIN_INTEGER = -2147483647;
+    public static final Integer MAX_INTEGER = 2147483647;
+    public static final Long MIN_LONG = -9223372036854775807L;
+    public static final Long MAX_LONG = 9223372036854775807L;
+    public static final Double MIN_DOUBLE = MIN_LONG;
+    public static final Double MAX_DOUBLE = MAX_LONG;
+    public static final Decimal MIN_DECIMAL = MIN_LONG;
+    public static final Decimal MAX_DECIMAL = MAX_LONG;
 
     private static Profile userProfile = [Select Id from Profile where Name = 'System Administrator'];
 
