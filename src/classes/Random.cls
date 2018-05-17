@@ -1166,14 +1166,14 @@ public class Random {
 
             if(length != null) {
                 while(text.length() < length) {
-                    text += (String)Random.anySyllable.run(data);
+                    text += (String)Random.anySyllable.run();
                 }
 
                 text = text.substring(0, length);
             }
             else {
                 for(Integer i = 0; i < syllables; i++) {
-                    text += (String)Random.anySyllable.run(data);
+                    text += (String)Random.anySyllable.run();
                 }
             }
 
@@ -1198,7 +1198,7 @@ public class Random {
 
             List<String> wordList = new List<String>();
             for(Integer i = 0; i < words; i++) {
-                wordList.add((String)Random.anyWord.run(data));
+                wordList.add((String)Random.anyWord.run());
             }
 
             String text = String.join(wordList, ' ');
@@ -1230,7 +1230,7 @@ public class Random {
             List<String> sentenceList = new List<String>();
 
             for(Integer i = 0; i < sentences; i++) {
-                sentenceList.add((String)Random.anySentence.run(data));
+                sentenceList.add((String)Random.anySentence.run());
             }
 
             return String.join(sentenceList, ' ');
