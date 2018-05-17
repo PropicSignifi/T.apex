@@ -661,8 +661,8 @@ public class Random {
             else if(type == 'Double') {
                 return Random.anyDouble.run(config);
             }
-            else if(type == 'Long') {
-                return Random.anyLong.run(config);
+            else if(type == 'Decimal') {
+                return Random.anyDecimal.run(config);
             }
             else if(type == 'Char') {
                 return Random.anyChar.run(config);
