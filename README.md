@@ -13,6 +13,7 @@ T.apex has a dependency on [R.apex](https://github.com/Click-to-Cloud/R.apex). P
 
 ```java
 T.expect(true).toBe(true);
+T.expect(false).never.toBe(true);
 ```
 
 ```java

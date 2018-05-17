@@ -1,0 +1,128 @@
+---
+title: "Home"
+description: "T.apex is simply the Swiss knife for unit testing in Apex."
+---
+
+{namespace pageIndex}
+
+/**
+ */
+{template .render}
+	{@param site: ?}
+
+	{call main.render data="all"}
+		{param content kind="html"}
+			{call .header data="all" /}
+			{call .why /}
+			{call .features /}
+			{call .how /}
+			{call .highlights /}
+			{call Footer.render data="all" /}
+		{/param}
+	{/call}
+{/template}
+
+/**
+ */
+{template .header}
+	{@param site: ?}
+
+	<header class="header">
+		<div class="container">
+			<h1 class="header-title">{$site.title}</h1>
+			<h2 class="header-subtitle">{$site.index.description}</h2>
+			<div class="header-cta">
+				<a href="/t-apex/tutorials/getting_started/step_1.html" class="btn btn-accent">Get Started</a>
+			</div>
+		</div>
+	</header>
+{/template}
+
+/**
+ */
+{template .why}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Why T.apex?</h3>
+					<p class="about-description">T.apex adopts expecting assertion style to make unit test codes more readable. Besides, T.apex provides powerful and easy mocking framework to make unit test easier. And T.apex has a built-in data generator to help you generate all kinds of random test data, including SObjects.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ */
+{template .features}
+	<div class="features">
+		<div class="container">
+			<div class="row">
+				<section class="feature col-md-4 col-md-offset-2">
+					<h3 class="feature-title">BDD Style</h3>
+					<p class="feature-description">T.apex provides a BDD-style assertion to Apex unit tests.</p>
+				</section>
+				<section class="feature col-md-4">
+					<h3 class="feature-title">Easy Mock</h3>
+					<p class="feature-description">T.apex makes mocking especially easy and powerful.</p>
+				</section>
+				<section class="feature col-md-4">
+					<h3 class="feature-title">Auto-Gen Test Data</h3>
+					<p class="feature-description">T.apex helps generate all kinds of test data.</p>
+				</section>
+			</div>
+		</div>
+	</div>
+{/template}
+
+/**
+ */
+{template .how}
+	<article class="about">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-md-offset-2">
+					<h3 class="about-title">Easy Unit Testing</h3>
+					<p class="about-description">It's easy to pick T.apex up, and T.apex makes your unit test easier than ever.</p>
+				</div>
+			</div>
+		</div>
+	</article>
+{/template}
+
+/**
+ */
+{template .highlights}
+	<div class="highlights">
+		<div class="container">
+			<section class="highlight row">
+				<div class="col-md-6 col-md-offset-2">
+					<h4 class="highlight-title">BDD Style</h4>
+					<p class="highlight-description">T.apex uses 'expect xxx to xxx' style assertion to make test code more readable.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img class="highlight-image" src="/t-apex/images/highlight_1.png" alt="Fluent API" height="200">
+				</div>
+			</section>
+			<section class="highlight row">
+				<div class="col-md-6 col-md-push-9">
+					<h4 class="highlight-title">Easy Mocking</h4>
+					<p class="highlight-description">T.apex establishes and verifies mock objects in just few lines of code.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-2 col-md-pull-6">
+					<img class="highlight-image" src="/t-apex/images/highlight_2.png" alt="Collection Support" height="200">
+				</div>
+			</section>
+			<section class="highlight row">
+				<div class="col-md-6 col-md-offset-2">
+					<h4 class="highlight-title">Auto-Gen Test Data</h4>
+					<p class="highlight-description">T.apex helps populate random test data to faciliate unit tests.</p>
+				</div>
+				<div class="col-md-5 col-md-offset-1">
+					<img class="highlight-image" src="/t-apex/images/highlight_3.png" alt="Function Composition" height="200">
+				</div>
+			</section>
+		</div>
+	</div>
+{/template}
